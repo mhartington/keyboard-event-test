@@ -6,9 +6,14 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
   constructor(public navCtrl: NavController) {
-
+    this.handleKeyboard();
   }
+  handleKeyboard(){
 
+    window.addEventListener('keyboardDidShow', () => {
+      console.log('hello?')
+      // Describe your logic which will be run each time keyboard is closed.
+    });
+  }
 }
